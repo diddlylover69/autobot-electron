@@ -9,7 +9,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,7 +23,7 @@ jobs:
       - name: Build installer
         run: npm run build
 
-            - name: Upload installer artifact
+      - name: Upload installer artifact
         uses: actions/upload-artifact@v2
         with:
           name: AutoBot-Windows-Installer

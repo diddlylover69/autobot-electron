@@ -22,8 +22,8 @@ jobs:
       - name: Build installer
         run: npm run build
 
-      - name: Upload installer artifact
-        uses: actions/upload-artifact@v3
+            - name: Upload installer artifact
+        uses: actions/upload-artifact@v2
         with:
           name: AutoBot-Windows-Installer
           path: dist/*.exe
